@@ -5,3 +5,7 @@
   margin: auto;
   justify-content: space-evenly;
 }
+
+.home-buttons .button {
+  margin: 0.5rem;
+}

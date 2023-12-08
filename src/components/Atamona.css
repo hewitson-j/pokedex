@@ -1,0 +1,11 @@
+#atamona-image {
+  width: 40%;
+  min-width: 400px;
+  border-radius: 15px;
+}
+
+.atamona-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

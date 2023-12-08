@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Header />
       <div className="home-buttons">
-        <Link title="Atamona" to={"atamona"}>
+        <Link title="Atamona" to={"/atamona"}>
           <button className="button">Learn About Atamona</button>
         </Link>
         <Link title="Search" to={"search"}>
