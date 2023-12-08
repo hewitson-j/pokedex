@@ -21,17 +21,6 @@
   margin: 2rem;
 }
 
-#landing-home-button {
-  background-color: #cc322a;
-  color: white;
-  font-weight: bold;
-  padding: 0.5rem;
-  width: 150px;
-  font-size: 16pt;
-  border: none;
-  border-radius: 10px;
-}
-
 #landing-home-button:hover {
   background-color: #9d261f;
   cursor: pointer;

@@ -7,10 +7,7 @@ body {
 }
 
 .screen {
-  display: flex;
   margin: auto;
-  justify-content: center;
-  align-items: center;
   background: linear-gradient(
     to top right,
     rgb(0, 162, 255),
@@ -28,4 +25,15 @@ body {
 .content-body {
   height: 100vh;
   display: flex;
+}
+
+.button {
+  background-color: #cc322a;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+  width: 150px;
+  font-size: 16pt;
+  border: none;
+  border-radius: 10px;
 }

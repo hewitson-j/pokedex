@@ -18,7 +18,7 @@ export default function Landing() {
         </div>
         <p id="welcome-text">{welcomeText}</p>
         <Link title="Get Started" to={"home"}>
-          <button id="landing-home-button">Home</button>
+          <button id="button">Home</button>
         </Link>
       </div>
     </div>
