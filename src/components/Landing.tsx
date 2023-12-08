@@ -7,21 +7,19 @@ export default function Landing() {
 
   return (
     <div className="landing">
-      <div className="landing-screen">
-        <div className="landing-body">
-          <div className="header logo">
-            <img src="Logo.png" className="pokeball-image" />
-            <h1>
-              Professor Applewood's
-              <br />
-              Unofficial Pokédex
-            </h1>
-          </div>
-          <p id="welcome-text">{welcomeText}</p>
-          <Link title="Get Started" to={"home"}>
-            <button id="landing-home-button">Home</button>
-          </Link>
+      <div className="landing-body">
+        <div className="header logo">
+          <img src="Logo.png" className="pokeball-image" />
+          <h1>
+            Professor Applewood's
+            <br />
+            Unofficial Pokédex
+          </h1>
         </div>
+        <p id="welcome-text">{welcomeText}</p>
+        <Link title="Get Started" to={"home"}>
+          <button id="landing-home-button">Home</button>
+        </Link>
       </div>
     </div>
   );

@@ -5,7 +5,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Router />
+        <div className="content-body">
+          <div className="screen">
+            <Router />
+          </div>
+        </div>
       </BrowserRouter>
     </>
   );

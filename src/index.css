@@ -5,3 +5,27 @@
 body {
   background-color: #cc322a;
 }
+
+.screen {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to top right,
+    rgb(0, 162, 255),
+    white,
+    rgb(0, 162, 255),
+    white,
+    rgb(0, 162, 255)
+  );
+  border-radius: 10px;
+  width: 90%;
+  min-width: 400px;
+  height: 90vh;
+}
+
+.content-body {
+  height: 100vh;
+  display: flex;
+}
