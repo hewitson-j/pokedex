@@ -7,10 +7,10 @@ export default function Home() {
     <>
       <Header />
       <div className="home-buttons">
-        <Link title="Atamona" to={"/atamona"}>
+        <Link title="Learn About Atamona" to={"/atamona"}>
           <button className="button">Learn About Atamona</button>
         </Link>
-        <Link title="Search" to={"search"}>
+        <Link title="Search" to={"/search"}>
           <button className="button">Search Pokedex</button>
         </Link>
       </div>
