@@ -21,11 +21,6 @@
   margin: 2rem;
 }
 
-#landing-home-button:hover {
-  background-color: #9d261f;
-  cursor: pointer;
-}
-
 @media only screen and (max-width: 600px) {
   .logo {
     width: 250px !important;

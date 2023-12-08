@@ -37,3 +37,8 @@ body {
   border: none;
   border-radius: 10px;
 }
+
+.button:hover {
+  background-color: #9d261f;
+  cursor: pointer;
+}
