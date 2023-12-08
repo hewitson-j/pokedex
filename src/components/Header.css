@@ -12,7 +12,7 @@
   border-radius: 20px;
 }
 
-.header img {
+.pokeball-image {
   width: 100px;
   animation: rotate 5s linear infinite;
 }

@@ -1,0 +1,69 @@
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.landing-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to top right,
+    rgb(0, 162, 255),
+    white,
+    rgb(0, 162, 255),
+    white,
+    rgb(0, 162, 255)
+  );
+  border-radius: 10px;
+  width: 90%;
+  min-width: 400px;
+  height: 90vh;
+}
+
+.landing-body {
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+  margin: auto;
+}
+
+.logo {
+  width: 50% !important;
+}
+
+#welcome-text {
+  font-size: 14pt;
+  margin: 2rem;
+}
+
+#landing-home-button {
+  background-color: #cc322a;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+  width: 150px;
+  font-size: 16pt;
+  border: none;
+  border-radius: 10px;
+}
+
+#landing-home-button:hover {
+  background-color: #9d261f;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 250px !important;
+    padding: none;
+  }
+  .landing-screen {
+    margin: auto !important;
+  }
+  .landing-body {
+    width: 100%;
+  }
+}
