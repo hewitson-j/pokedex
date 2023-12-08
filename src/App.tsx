@@ -1,11 +1,12 @@
-import Body from "./components/Body";
-import Header from "./components/Header";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./components/Router";
 
 function App() {
   return (
     <>
-      <Header />
-      <Body />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </>
   );
 }
