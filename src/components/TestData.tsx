@@ -38,15 +38,49 @@ const typeArray: TypeProps[] = [
 ];
 
 interface TestDataProps {
-  id: string;
+  id: number;
   dexId: number;
   name: string;
   description: string;
   height: number;
   weight: number;
-  gender: string;
+  gender: number;
+  type1: number;
+  type2?: number;
 }
 
-const testDataArray: TestDataProps[] = [];
+const testDataArray: TestDataProps[] = [
+  {
+    id: 0,
+    dexId: 1,
+    name: "Bulbasaur",
+    description: "Bulbasaur Description",
+    height: 1.5,
+    weight: 250,
+    gender: 0,
+    type1: 2,
+    type2: 7,
+  },
+  {
+    id: 1,
+    dexId: 1,
+    name: "Charmander",
+    description: "Charmander Description",
+    height: 1.5,
+    weight: 250,
+    gender: 0,
+    type1: 0,
+  },
+  {
+    id: 2,
+    dexId: 1,
+    name: "Squirtle",
+    description: "Squirtle Description",
+    height: 1.5,
+    weight: 250,
+    gender: 0,
+    type1: 1,
+  },
+];
 
 export { testDataArray, genderArray, typeArray };
