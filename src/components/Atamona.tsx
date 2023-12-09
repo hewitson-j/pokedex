@@ -25,7 +25,15 @@ export default function Atamona() {
               <b>Harvestdale:</b> Your journey begins in this quaint farming
               community, nestled on the edge of the enchanting Valley of
               Paradise. Harvestdale epitomizes rural charm, with its close-knit
-              community and serene farmlands.
+              community and serene farmlands. Here my lab has a small branch
+              where we study mysterious Pokemon which come from the Valley of
+              Paradise.
+            </li>
+            <li>
+              <b>Sunstone:</b> Known for its stunning red rock landscapes, this
+              town hosts the first rock gym. Sunstone's desert vistas are a
+              sight to behold, offering challenging terrains for both trainers
+              and Pokémon.
             </li>
             <li>
               <b>Boscana:</b> Surrounded by a lush forest, Boscana is home to
@@ -45,21 +53,9 @@ export default function Atamona() {
               testament to the enduring spirit of pioneers and explorers.
             </li>
             <li>
-              <b>Harvestdale:</b> Your journey begins in this quaint farming
-              community, nestled on the edge of the enchanting Valley of
-              Paradise. Harvestdale epitomizes rural charm, with its close-knit
-              community and serene farmlands.
-            </li>
-            <li>
               <b>Carrilon:</b> Known for its bustling rail stations, Carrilon
               houses the fifth fighting gym. This town is a hub of activity,
               where the past meets the present in a vibrant community.
-            </li>
-            <li>
-              <b>Harvestdale:</b> Your journey begins in this quaint farming
-              community, nestled on the edge of the enchanting Valley of
-              Paradise. Harvestdale epitomizes rural charm, with its close-knit
-              community and serene farmlands.
             </li>
             <li>
               <b>Irondale:</b> Home to the sixth steel gym and a renowned
@@ -79,9 +75,13 @@ export default function Atamona() {
             </li>
             <li>
               <b>Soleana:</b> The heart of Atamona, Soleana is home to the Elite
-              Four and the Syndicate. This city is a melting pot of cultures,
-              ideas, and hidden agendas, offering the ultimate challenge to
-              aspiring champions.
+              Four and the Syndicate, an organization which helps the citizens
+              of Atamona achieve their life goals and find lasting peace
+              (although between you and me their motives seem suspicious). This
+              city is a melting pot of cultures, ideas, and hidden agendas,
+              fusing tradition with technology and offering the ultimate
+              challenge to aspiring champions. My main lab is here in the city
+              too!
             </li>
           </ul>
           <br />
