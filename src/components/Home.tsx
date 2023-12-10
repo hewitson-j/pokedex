@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import "./Home.css";
+import HomeList from "./HomeList";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           <button className="button">Search Pokedex</button>
         </Link>
       </div>
+      <HomeList />
     </>
   );
 }
