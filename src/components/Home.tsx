@@ -5,7 +5,7 @@ import HomeList from "./HomeList";
 
 export default function Home() {
   return (
-    <>
+    <div className="home">
       <Header />
       <div className="home-buttons">
         <Link title="Learn About Atamona" to={"/atamona"}>
@@ -15,7 +15,19 @@ export default function Home() {
           <button className="button">Search Pokedex</button>
         </Link>
       </div>
-      <HomeList />
-    </>
+      <div className="home-content">
+        <div className="home-media">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/a6/Pok%C3%A9mon_Pikachu_art.png"
+            alt="Default Image"
+          />
+          <p>
+            This is the default description for a pokemon. Please feel free to
+            look around more.
+          </p>
+        </div>
+        <HomeList />
+      </div>
+    </div>
   );
 }

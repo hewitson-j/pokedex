@@ -6,7 +6,7 @@ export default function HomeList() {
     <div className="home-list">
       <ul>
         {testDataArray.map((entry) => (
-          <li>{entry.name}</li>
+          <li key={entry.id}>{entry.name}</li>
         ))}
       </ul>
     </div>

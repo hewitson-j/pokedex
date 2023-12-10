@@ -1,12 +1,19 @@
 .home-list ul {
   list-style: none;
+  background-color: rgba(255, 255, 255, 0.275);
+  text-align: left;
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .home-list ul li {
   margin: 1rem;
   font-size: 20px;
+  width: 200px;
+  padding: 0.75rem;
+  border-radius: 10px;
 }
 
 .home-list ul li:hover {
-  background-color: rgba(255, 255, 255, 0.103);
+  background-color: rgba(255, 255, 255, 0.383);
 }

@@ -1,3 +1,7 @@
+.home {
+  padding: 0 2rem;
+}
+
 .home-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -8,4 +12,41 @@
 
 .home-buttons .button {
   margin: 0.5rem;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  justify-content: space-evenly;
+}
+
+/* To do - fix max height so that element doesn't go beyond screen area. */
+.home-media {
+  display: flex;
+  flex-direction: column;
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.home-media img {
+  margin: 0 auto 2rem;
+}
+
+.home-media p {
+  width: 75%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 975px) {
+  .home-content {
+    flex-direction: column;
+  }
+  .home {
+    max-height: 100%;
+    overflow-y: scroll;
+  }
+  .home-media {
+    max-height: none;
+  }
 }
