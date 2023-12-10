@@ -1,0 +1,19 @@
+.search {
+  text-align: center;
+}
+
+.searchbar {
+  display: flex;
+  margin: 2rem auto;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+#search-input {
+  font-size: 16pt;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: inset;
+  width: 75%;
+}
