@@ -102,7 +102,7 @@ export default function Atamona() {
         </div>
       </div>
       <Link title="Home" to={"/home"}>
-        <button className="button" id="atamona-home-button">
+        <button className="buttons" id="atamona-home-button">
           Back to Home
         </button>
       </Link>

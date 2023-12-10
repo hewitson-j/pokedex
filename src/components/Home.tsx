@@ -9,10 +9,10 @@ export default function Home() {
       <Header />
       <div className="home-buttons">
         <Link title="Learn About Atamona" to={"/atamona"}>
-          <button className="button">Learn About Atamona</button>
+          <button className="buttons">Learn About Atamona</button>
         </Link>
         <Link title="Search" to={"/search"}>
-          <button className="button">Search Pokedex</button>
+          <button className="buttons">Search Pokedex</button>
         </Link>
       </div>
       <div className="home-content">
