@@ -15,6 +15,14 @@ body {
   border: 1px solid rgb(78, 78, 78);
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9d261f;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #6f110c;
+}
+
 .screen {
   margin: auto;
   background: linear-gradient(
