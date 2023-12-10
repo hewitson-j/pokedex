@@ -8,6 +8,7 @@
   width: 50%;
   margin: auto;
   justify-content: space-evenly;
+  gap: 1rem;
 }
 
 .home-buttons .button {
@@ -41,6 +42,7 @@
 @media only screen and (max-width: 975px) {
   .home-content {
     flex-direction: column;
+    gap: 2rem;
   }
   .home {
     max-height: 100%;

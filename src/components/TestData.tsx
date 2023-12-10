@@ -81,6 +81,26 @@ const testDataArray: TestDataProps[] = [
     gender: 0,
     type1: 1,
   },
+  {
+    id: 3,
+    dexId: 25,
+    name: "Pikachu",
+    description: "Pikachu Description",
+    height: 1.5,
+    weight: 250,
+    gender: 0,
+    type1: 1,
+  },
+  {
+    id: 4,
+    dexId: 151,
+    name: "Mew",
+    description: "Mew Description",
+    height: 1.5,
+    weight: 250,
+    gender: 0,
+    type1: 1,
+  },
 ];
 
 export { testDataArray, genderArray, typeArray };
