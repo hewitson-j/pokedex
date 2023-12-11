@@ -5,15 +5,22 @@
 .searchbar {
   display: flex;
   margin: 2rem auto;
-  width: 50%;
+  width: 60%;
   justify-content: space-evenly;
+}
+
+.search-select {
+  border-radius: 10px 0 0 10px;
 }
 
 #search-input {
   font-size: 16pt;
   padding: 0.5rem;
-  border-radius: 10px;
   border: none;
   box-shadow: inset;
   width: 75%;
+}
+
+#search-button {
+  border-radius: 0 10px 10px 0 !important;
 }
