@@ -20,6 +20,8 @@
   flex-direction: row;
   padding: 2rem;
   justify-content: space-evenly;
+  max-height: fit-content;
+  overflow-y: scroll;
 }
 
 /* To do - fix max height so that element doesn't go beyond screen area. */
@@ -35,6 +37,7 @@
 
 .home-media img {
   margin: 0 auto 2rem;
+  max-width: 200px;
 }
 
 .home-media p {
