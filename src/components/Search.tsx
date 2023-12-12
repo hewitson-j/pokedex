@@ -14,7 +14,10 @@ export default function Search() {
     const results = [];
     if (searchType === "name") {
       for (const entry of testDataArray) {
-        if (entry.name.includes(searchTerm)) {
+        const name = entry.name.toUpperCase();
+        const search = searchTerm.toUpperCase();
+
+        if (name.includes(search)) {
           results.push(entry);
         }
       }
