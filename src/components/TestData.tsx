@@ -37,7 +37,7 @@ const typeArray: TypeProps[] = [
   { id: 18, type: "???" },
 ];
 
-interface TestDataProps {
+export interface TestDataProps {
   id: number;
   dexId: number;
   name: string;
@@ -63,7 +63,7 @@ const testDataArray: TestDataProps[] = [
   },
   {
     id: 1,
-    dexId: 1,
+    dexId: 4,
     name: "Charmander",
     description: "Charmander Description",
     height: 1.5,
@@ -73,7 +73,7 @@ const testDataArray: TestDataProps[] = [
   },
   {
     id: 2,
-    dexId: 1,
+    dexId: 7,
     name: "Squirtle",
     description: "Squirtle Description",
     height: 1.5,
