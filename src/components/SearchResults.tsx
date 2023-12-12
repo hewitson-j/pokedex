@@ -8,16 +8,18 @@ interface SearchResultsProps {
 export default function SearchResults({ searchResults }: SearchResultsProps) {
   searchResults.length > 0;
   return (
-    <>
+    <div className="search-results">
       {searchResults.length > 0 ? (
-        <ul>
+        <ul className="results-list">
           {searchResults.map((result) => (
-            <li key={result.id}>{result.name}</li>
+            <li key={result.id}>
+              {result.dexId}. {result.name}
+            </li>
           ))}
         </ul>
       ) : (
-        <p>No results found.</p>
+        <p id="no-results">No results found.</p>
       )}
-    </>
+    </div>
   );
 }
