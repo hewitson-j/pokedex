@@ -41,6 +41,11 @@ export default function Home() {
             alt={selected.alt || "Default Image"}
           />
           <p>{selected.description || "Default Description"}</p>
+          <Link to={`/entry/${selected.id}`}>
+            <button id="home-media-link" className="buttons">
+              See More
+            </button>
+          </Link>
         </div>
         <HomeList handleSelect={handleSelect} />
       </div>

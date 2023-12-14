@@ -58,9 +58,14 @@ export default function EntryPage() {
               <b>Description:</b>
               <br /> {item.description}
             </p>
-            <Link title="Search" to={"/search"}>
-              <button className="buttons">Back to Search</button>
-            </Link>
+            <div className="entry-buttons">
+              <Link title="Search" to={"/search"}>
+                <button className="buttons">Back to Search</button>
+              </Link>
+              <Link title="Search" to={"/home"}>
+                <button className="buttons">Back to Home</button>
+              </Link>
+            </div>
           </div>
         </>
       ) : (

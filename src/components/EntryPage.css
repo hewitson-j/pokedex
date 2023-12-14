@@ -41,6 +41,13 @@
   margin: 1rem auto;
 }
 
+.entry-buttons {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
 @media screen and (max-width: 720px) {
   .data-body {
     width: 90%;

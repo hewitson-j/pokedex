@@ -22,18 +22,21 @@
   flex-direction: row;
   padding: 2rem;
   justify-content: space-evenly;
-  max-height: 370px;
+  height: max-content;
+  max-height: 400px;
   overflow-y: scroll;
 }
 
 .home-media {
   display: flex;
-  max-width: 250px;
+  width: 300px;
+  max-width: 300px;
   flex-direction: column;
   overflow-y: scroll;
   background-color: rgba(255, 255, 255, 0.275);
   padding: 1rem;
   border-radius: 10px;
+  text-align: center;
 }
 
 .home-media img {
@@ -44,6 +47,10 @@
 .home-media p {
   width: 75%;
   margin: auto;
+}
+
+#home-media-link {
+  margin: 1rem;
 }
 
 @media only screen and (max-width: 975px) {
@@ -58,6 +65,7 @@
   .home-media {
     max-height: none;
     max-width: none;
+    width: inherit;
   }
   .home-content {
     max-height: none;
