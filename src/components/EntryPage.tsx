@@ -11,28 +11,57 @@ export default function EntryPage() {
 
   const item = testDataArray.find((entry) => entry.id === parseInt(itemId));
   const type1 = typeArray.find((type) => type.id === item?.type1);
-
+  const type2 = typeArray.find((type) => type.id === item?.type2);
   const gender = genderArray.find((gender) => gender.id === item?.gender);
 
   return (
     <div>
       {item ? (
         <>
-          <div>
-            <h2>{item.name}</h2>
+          <div className="entry-page">
+            <h2>
+              #{item.dexId}: {item.name}
+            </h2>
             <img src={item.image} alt={item.alt} />
-            <div>
-              <p>{type1?.type}</p>
-              <p>{item.type2}</p>
-              <p>Height: {item.height} m.</p>
-              <p>Weight: {item.weight} kgs.</p>
-              <p>Genders: {gender?.genderType}</p>
+
+            <div className="types-body">
+              <div
+                className="types"
+                style={{ backgroundColor: `${type1?.color}` }}
+              >
+                {type1?.type}
+              </div>
+              {type2 && (
+                <div
+                  className="types"
+                  style={{ backgroundColor: `${type2?.color}` || "inherit" }}
+                >
+                  {type2?.type}
+                </div>
+              )}
             </div>
-            <p>{item.description}</p>
+            <div className="data-body">
+              <p>
+                <b>Height:</b>
+                <br /> {item.height} m
+              </p>
+              <p>
+                <b>Weight:</b>
+                <br /> {item.weight} kgs
+              </p>
+              <p title={gender?.genderType}>
+                <b>Genders:</b>
+                <br /> {gender?.genderChar}
+              </p>
+            </div>
+            <p id="entry-description">
+              <b>Description:</b>
+              <br /> {item.description}
+            </p>
+            <Link title="Search" to={"/search"}>
+              <button className="buttons">Back to Search</button>
+            </Link>
           </div>
-          <Link title="Search" to={"/search"}>
-            <button className="buttons">Back to Search</button>
-          </Link>
         </>
       ) : (
         <>

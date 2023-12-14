@@ -1,5 +1,7 @@
 .home {
   padding: 0 2rem;
+  max-height: 90vh;
+  overflow-y: scroll;
 }
 
 .home-buttons {
@@ -20,15 +22,14 @@
   flex-direction: row;
   padding: 2rem;
   justify-content: space-evenly;
-  max-height: fit-content;
+  max-height: 370px;
   overflow-y: scroll;
 }
 
-/* To do - fix max height so that element doesn't go beyond screen area. */
 .home-media {
   display: flex;
+  max-width: 250px;
   flex-direction: column;
-  max-height: 50vh;
   overflow-y: scroll;
   background-color: rgba(255, 255, 255, 0.275);
   padding: 1rem;
@@ -55,6 +56,10 @@
     overflow-y: scroll;
   }
   .home-media {
+    max-height: none;
+    max-width: none;
+  }
+  .home-content {
     max-height: none;
   }
 }

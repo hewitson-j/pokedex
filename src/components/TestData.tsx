@@ -1,40 +1,42 @@
 interface genderProps {
   id: number;
   genderType: string;
+  genderChar: string;
 }
 
 const genderArray: genderProps[] = [
-  { id: 0, genderType: "Male and Female" },
-  { id: 1, genderType: "Female only" },
-  { id: 3, genderType: "Male only" },
-  { id: 4, genderType: "Undefined" },
+  { id: 0, genderType: "Male and Female", genderChar: "♂ and ♀" },
+  { id: 1, genderType: "Female only", genderChar: "♀" },
+  { id: 3, genderType: "Male only", genderChar: "♂" },
+  { id: 4, genderType: "Undefined", genderChar: "???" },
 ];
 
 interface TypeProps {
   id: number;
   type: string;
+  color?: string;
 }
 
 const typeArray: TypeProps[] = [
-  { id: 0, type: "Fire" },
-  { id: 1, type: "Water" },
-  { id: 2, type: "Grass" },
-  { id: 3, type: "Normal" },
-  { id: 4, type: "Electric" },
-  { id: 5, type: "Ice" },
-  { id: 6, type: "Fighting" },
-  { id: 7, type: "Poison" },
-  { id: 8, type: "Ground" },
-  { id: 9, type: "Flying" },
-  { id: 10, type: "Psychic" },
-  { id: 11, type: "Bug" },
-  { id: 12, type: "Rock" },
-  { id: 13, type: "Ghost" },
-  { id: 14, type: "Dragon" },
-  { id: 15, type: "Dark" },
-  { id: 16, type: "Steel" },
-  { id: 17, type: "Fairy" },
-  { id: 18, type: "???" },
+  { id: 0, type: "Fire", color: "#EE8130" },
+  { id: 1, type: "Water", color: "#6390F0" },
+  { id: 2, type: "Grass", color: "#7AC74C" },
+  { id: 3, type: "Normal", color: "#A8A77A" },
+  { id: 4, type: "Electric", color: "#F7D02C" },
+  { id: 5, type: "Ice", color: "#96D9D6" },
+  { id: 6, type: "Fighting", color: "#C22E28" },
+  { id: 7, type: "Poison", color: "#A33EA1" },
+  { id: 8, type: "Ground", color: "#E2BF65" },
+  { id: 9, type: "Flying", color: "#A98FF3" },
+  { id: 10, type: "Psychic", color: "#F95587" },
+  { id: 11, type: "Bug", color: "#A6B91A" },
+  { id: 12, type: "Rock", color: "#B6A136" },
+  { id: 13, type: "Ghost", color: "#735797" },
+  { id: 14, type: "Dragon", color: "#6F35FC" },
+  { id: 15, type: "Dark", color: "#705746" },
+  { id: 16, type: "Steel", color: "#B7B7CE" },
+  { id: 17, type: "Fairy", color: "#D685AD" },
+  { id: 18, type: "???", color: "#04c991" },
 ];
 
 export interface TestDataProps {
@@ -96,11 +98,12 @@ const testDataArray: TestDataProps[] = [
     id: 3,
     dexId: 25,
     name: "Pikachu",
-    description: "Pikachu Description",
+    description:
+      "	When it is angered, it immediately discharges the energy stored in the pouches in its cheeks. When several of these Pokémon gather, their electricity can build and cause lightning storms.",
     height: 1.5,
     weight: 250,
     gender: 0,
-    type1: 1,
+    type1: 4,
     image:
       "https://archives.bulbagarden.net/media/upload/thumb/4/4a/0025Pikachu.png/375px-0025Pikachu.png",
     alt: "Pikachu",
@@ -113,7 +116,7 @@ const testDataArray: TestDataProps[] = [
     height: 1.5,
     weight: 250,
     gender: 0,
-    type1: 1,
+    type1: 10,
     image:
       "https://archives.bulbagarden.net/media/upload/thumb/9/9a/0151Mew.png/375px-0151Mew.png",
     alt: "Mew",

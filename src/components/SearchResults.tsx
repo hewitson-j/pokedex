@@ -13,11 +13,13 @@ export default function SearchResults({ searchResults }: SearchResultsProps) {
       {searchResults.length > 0 ? (
         <ul className="results-list">
           {searchResults.map((result) => (
-            <Link to={`/entry/${result.id}`}>
-              <li key={result.id}>
-                {result.dexId}. {result.name}
-              </li>
-            </Link>
+            <div key={result.id}>
+              <Link to={`/entry/${result.id}`}>
+                <li key={result.id}>
+                  {result.dexId}. {result.name}
+                </li>
+              </Link>
+            </div>
           ))}
         </ul>
       ) : (
