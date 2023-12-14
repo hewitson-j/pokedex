@@ -32,11 +32,11 @@ export default function Home() {
       </div>
       <div className="home-content">
         <div className="home-media">
-          <h3>{selected.name || "#25: Pikachu"}</h3>
+          <h3>{selected.name || "Missingno."}</h3>
           <img
             src={
               selected.image ||
-              "https://upload.wikimedia.org/wikipedia/en/a/a6/Pok%C3%A9mon_Pikachu_art.png"
+              "https://static.wikia.nocookie.net/pokemontowerdefense/images/c/ce/Missingno_image.png/revision/latest?cb=20180809204127"
             }
             alt={selected.alt || "Default Image"}
           />
