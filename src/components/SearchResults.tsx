@@ -1,5 +1,6 @@
 import { TestDataProps } from "./TestData";
 import "./SearchResults.css";
+import { Link } from "react-router-dom";
 
 interface SearchResultsProps {
   searchResults: TestDataProps[];
@@ -12,9 +13,11 @@ export default function SearchResults({ searchResults }: SearchResultsProps) {
       {searchResults.length > 0 ? (
         <ul className="results-list">
           {searchResults.map((result) => (
-            <li key={result.id}>
-              {result.dexId}. {result.name}
-            </li>
+            <Link to={`/entry/${result.id}`}>
+              <li key={result.id}>
+                {result.dexId}. {result.name}
+              </li>
+            </Link>
           ))}
         </ul>
       ) : (

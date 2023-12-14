@@ -16,7 +16,7 @@ export default function ErrorPage() {
         {errorResponses[Math.floor(Math.random() * errorResponses.length)]}
       </h3>
       <Link title="Back to Home" to={"/home"}>
-        <button className="button">Back to Home</button>
+        <button className="buttons">Back to Home</button>
       </Link>
     </div>
   );
