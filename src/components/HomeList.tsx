@@ -16,7 +16,7 @@ export default function HomeList({ handleSelect }: HomeListProps) {
               handleSelect(entry.name);
             }}
           >
-            {entry.name}
+            {entry.dexId}. {entry.name}
           </li>
         ))}
       </ul>

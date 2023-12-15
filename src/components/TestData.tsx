@@ -7,8 +7,8 @@ interface genderProps {
 const genderArray: genderProps[] = [
   { id: 0, genderType: "Male and Female", genderChar: "♂ and ♀" },
   { id: 1, genderType: "Female only", genderChar: "♀" },
-  { id: 3, genderType: "Male only", genderChar: "♂" },
-  { id: 4, genderType: "Undefined", genderChar: "???" },
+  { id: 2, genderType: "Male only", genderChar: "♂" },
+  { id: 3, genderType: "Undefined", genderChar: "???" },
 ];
 
 interface TypeProps {
@@ -109,10 +109,11 @@ const testDataArray: TestDataProps[] = [
     alt: "Pikachu",
   },
   {
-    id: 4,
+    id: 150,
     dexId: 151,
     name: "Mew",
-    description: "Mew Description",
+    description:
+      "It's very intelligent and can use an incredible variety of moves. Many believe that all other Pokémon are descendants of this one. This mythical Pokémon is said to be extinct, but sightings of it are still being reported to this day.",
     height: 1.5,
     weight: 250,
     gender: 0,
@@ -120,6 +121,35 @@ const testDataArray: TestDataProps[] = [
     image:
       "https://archives.bulbagarden.net/media/upload/thumb/9/9a/0151Mew.png/375px-0151Mew.png",
     alt: "Mew",
+  },
+  {
+    id: 926,
+    dexId: 927,
+    name: "Dachsbun",
+    description:
+      "The pleasant aroma that emanates from this Pokémon’s body helps wheat grow, so Dachsbun has been treasured by farming villages. 	The surface of this Pokémon's skin hardens when exposed to intense heat, and its body has an appetizing aroma.",
+    height: 1.5,
+    weight: 250,
+    gender: 0,
+    type1: 17,
+    image:
+      "https://archives.bulbagarden.net/media/upload/thumb/8/81/0927Dachsbun.png/375px-0927Dachsbun.png",
+    alt: "Dachsbun",
+  },
+  {
+    id: 1007,
+    dexId: 1008,
+    name: "Miraidon",
+    description:
+      "Much remains unknown about this creature. It resembles Cyclizar, but it is far more ruthless and powerful. This seems to be the Iron Serpent mentioned in an old book. The Iron Serpent is said to have turned the land to ash with its lightning.",
+    height: 1.5,
+    weight: 250,
+    gender: 3,
+    type1: 4,
+    type2: 14,
+    image:
+      "https://archives.bulbagarden.net/media/upload/thumb/1/1c/1008Miraidon.png/375px-1008Miraidon.png",
+    alt: "Miraidon",
   },
 ];
 

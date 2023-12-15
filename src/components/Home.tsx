@@ -32,7 +32,9 @@ export default function Home() {
       </div>
       <div className="home-content">
         <div className="home-media">
-          <h3>{selected.name || "Missingno."}</h3>
+          <h3>
+            {selected.dexId || "0."}. {selected.name || "Missingno."}
+          </h3>
           <img
             src={
               selected.image ||
