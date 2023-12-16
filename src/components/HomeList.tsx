@@ -12,7 +12,10 @@ export default function HomeList({ handleSelect }: HomeListProps) {
   const [entries, setEntries] = useState<PokemonData[]>([]);
 
   const fetchPokemon = async () => {
-    const { data, error } = await supabase.from("pokemon").select("*");
+    const { data, error } = await supabase
+      .from("pokemon")
+      .select("*")
+      .order("dex_id", { ascending: true });
     if (error) {
       console.log("Error loading data: ", error);
     } else {
@@ -24,7 +27,7 @@ export default function HomeList({ handleSelect }: HomeListProps) {
   useEffect(() => {
     fetchPokemon();
     console.log(entries);
-  });
+  }, []);
 
   return (
     <div className="home-list">
