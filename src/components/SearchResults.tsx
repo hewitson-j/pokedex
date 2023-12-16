@@ -1,9 +1,9 @@
-import { TestDataProps } from "./TestData";
 import "./SearchResults.css";
 import { Link } from "react-router-dom";
+import PokemonData from "./PokemonData";
 
 interface SearchResultsProps {
-  searchResults: TestDataProps[];
+  searchResults: PokemonData[];
 }
 
 export default function SearchResults({ searchResults }: SearchResultsProps) {
@@ -14,9 +14,9 @@ export default function SearchResults({ searchResults }: SearchResultsProps) {
         <ul className="results-list">
           {searchResults.map((result) => (
             <div key={result.id}>
-              <Link to={`/entry/${result.id}`}>
+              <Link to={`/entry/${result.dex_id}`}>
                 <li key={result.id}>
-                  {result.dexId}. {result.name}
+                  {result.dex_id}. {result.name}
                 </li>
               </Link>
             </div>

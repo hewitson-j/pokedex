@@ -1,36 +1,51 @@
 import { Link } from "react-router-dom";
 import "./Search.css";
-import { useState } from "react";
-import { testDataArray, TestDataProps } from "./TestData";
 import SearchResults from "./SearchResults";
+import { useState } from "react";
+import supabase from "../supabaseconfig";
+import PokemonData from "./PokemonData";
 
 export default function Search() {
   const [searchType, setSearchType] = useState("number");
   const [searchRan, setSearchRan] = useState(false);
-  const [searchResults, setSearchResults] = useState<TestDataProps[]>([]);
+  const [searchResults, setSearchResults] = useState<PokemonData[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSearch = (searchTerm: string) => {
-    const results = [];
+  interface SearchProps {
+    searchTerm: string;
+    searchType: string;
+  }
+
+  const fetchPokemon = async ({ searchTerm, searchType }: SearchProps) => {
+    setIsLoading(true);
     if (searchType === "name") {
-      for (const entry of testDataArray) {
-        const name = entry.name.toUpperCase();
-        const search = searchTerm.toUpperCase();
-
-        if (name.includes(search)) {
-          results.push(entry);
-        }
+      const { data, error } = await supabase
+        .from("pokemon")
+        .select("*")
+        .ilike("name", `%${searchTerm}%`);
+      if (error) {
+        console.log("Error loading: ", error);
+      } else {
+        setSearchResults(data);
+        setSearchRan(true);
+        setIsLoading(false);
+        console.log(data);
       }
     } else if (searchType === "number") {
-      for (const entry of testDataArray) {
-        if (entry.dexId === parseInt(searchTerm)) {
-          results.push(entry);
-        }
+      const { data, error } = await supabase
+        .from("pokemon")
+        .select("*")
+        .eq("dex_id", `${parseInt(searchTerm)}`);
+      if (error) {
+        console.log("Error loading: ", error);
+      } else {
+        setSearchResults(data);
+        setSearchRan(true);
+        setIsLoading(false);
+        console.log(data);
       }
     }
-
-    setSearchResults(results);
-    setSearchRan(true);
   };
 
   return (
@@ -61,7 +76,9 @@ export default function Search() {
               alert("Cannot be blank.");
               return;
             }
-            handleSearch(searchTerm);
+            setSearchRan(false);
+            setIsLoading(true);
+            fetchPokemon({ searchTerm, searchType });
           }}
         >
           Search
@@ -69,11 +86,8 @@ export default function Search() {
       </div>
       <div className="search-results">
         <h3>Search Results:</h3>
-        {searchRan ? (
-          <SearchResults searchResults={searchResults} />
-        ) : (
-          <p>Do a search first!</p>
-        )}
+        {!isLoading ? <></> : <p>Loading...</p>}
+        {searchRan ? <SearchResults searchResults={searchResults} /> : <></>}
       </div>
       <Link title="Home" to={"/home"}>
         <button id="search-home-button" className="buttons">
