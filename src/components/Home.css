@@ -33,6 +33,7 @@
   max-width: 300px;
   flex-direction: column;
   overflow-y: scroll;
+  overflow-x: hidden;
   background-color: rgba(255, 255, 255, 0.275);
   padding: 1rem;
   border-radius: 10px;
