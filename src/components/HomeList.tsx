@@ -1,7 +1,7 @@
 import "./HomeList.css";
 import { useEffect, useState } from "react";
 import supabase from "../supabaseconfig";
-import PokemonData from "./PokemonData";
+import PokemonData from "./Interfaces";
 
 interface HomeListProps {
   handleSelect: (name: string) => void;
