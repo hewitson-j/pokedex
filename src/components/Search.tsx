@@ -3,12 +3,12 @@ import "./Search.css";
 import SearchResults from "./SearchResults";
 import { useState } from "react";
 import supabase from "../supabaseconfig";
-import PokemonData from "./PokemonData";
+import PokemonType from "./Interfaces";
 
 export default function Search() {
   const [searchType, setSearchType] = useState("number");
   const [searchRan, setSearchRan] = useState(false);
-  const [searchResults, setSearchResults] = useState<PokemonData[]>([]);
+  const [searchResults, setSearchResults] = useState<PokemonType[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -20,6 +20,10 @@ export default function Search() {
   const fetchPokemon = async ({ searchTerm, searchType }: SearchProps) => {
     setIsLoading(true);
     if (searchType === "name") {
+      if (typeof searchTerm !== "string") {
+        alert("Please type in a valid search term.");
+        return;
+      }
       const { data, error } = await supabase
         .from("pokemon")
         .select("*")
@@ -33,6 +37,10 @@ export default function Search() {
         console.log(data);
       }
     } else if (searchType === "number") {
+      if (typeof parseInt(searchTerm) !== "number") {
+        alert("Please type in a number");
+        return;
+      }
       const { data, error } = await supabase
         .from("pokemon")
         .select("*")

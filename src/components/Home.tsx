@@ -3,11 +3,11 @@ import Header from "./Header";
 import "./Home.css";
 import HomeList from "./HomeList";
 import { useEffect, useState } from "react";
-import PokemonData from "./PokemonData";
+import PokemonType from "./Interfaces";
 import supabase from "../supabaseconfig";
 
 export default function Home() {
-  const defaultEntry: PokemonData = {
+  const defaultEntry: PokemonType = {
     id: 2000,
     name: "Welcome!",
     dex_id: 0,
@@ -19,10 +19,10 @@ export default function Home() {
     image_url:
       "https://www.freeiconspng.com/thumbs/pokeball-png/file-pokeball-png-0.png",
   };
-  const [selected, setSelected] = useState<PokemonData>(defaultEntry);
+  const [selected, setSelected] = useState<PokemonType>(defaultEntry);
 
   const [isLoading, setIsLoading] = useState(true);
-  const [entries, setEntries] = useState<PokemonData[]>([]);
+  const [entries, setEntries] = useState<PokemonType[]>([]);
 
   const fetchPokemon = async () => {
     const { data, error } = await supabase.from("pokemon").select("*");
@@ -80,7 +80,7 @@ export default function Home() {
             {selected.dex_id === 0 ? (
               ""
             ) : (
-              <Link to={`/entry/${selected.id}`}>
+              <Link to={`/entry/${selected.dex_id}`}>
                 <button id="home-media-link" className="buttons">
                   See More
                 </button>
