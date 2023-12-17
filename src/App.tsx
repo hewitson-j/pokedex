@@ -4,7 +4,7 @@ import Router from "./components/Router";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/pokedex">
         <div className="content-body">
           <div className="screen">
             <Router />
