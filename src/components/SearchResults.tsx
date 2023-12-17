@@ -1,6 +1,6 @@
 import "./SearchResults.css";
 import { Link } from "react-router-dom";
-import PokemonData from "./PokemonData";
+import PokemonData from "./Interfaces";
 
 interface SearchResultsProps {
   searchResults: PokemonData[];

@@ -27,7 +27,8 @@ export default function Search() {
       const { data, error } = await supabase
         .from("pokemon")
         .select("*")
-        .ilike("name", `%${searchTerm}%`);
+        .ilike("name", `%${searchTerm}%`)
+        .order("dex_id", { ascending: true });
       if (error) {
         console.log("Error loading: ", error);
       } else {
@@ -44,7 +45,8 @@ export default function Search() {
       const { data, error } = await supabase
         .from("pokemon")
         .select("*")
-        .eq("dex_id", `${parseInt(searchTerm)}`);
+        .eq("dex_id", `${parseInt(searchTerm)}`)
+        .order("dex_id", { ascending: true });
       if (error) {
         console.log("Error loading: ", error);
       } else {
@@ -58,7 +60,9 @@ export default function Search() {
 
   return (
     <div className="search">
-      <h2 className="content-headers">Search Pokedex</h2>
+      <h2 className="content-headers" id="search-content-header">
+        Search Pokedex
+      </h2>
       <div className="searchbar">
         <select
           className="search-select"
