@@ -75,6 +75,11 @@ export default function Home() {
                 "https://www.freeiconspng.com/thumbs/pokeball-png/file-pokeball-png-0.png"
               }
               alt={selected.name || "Default Image"}
+              onError={(e) => {
+                const imgElement = e.target as HTMLImageElement;
+                imgElement.src =
+                  "https://www.freeiconspng.com/thumbs/pokeball-png/file-pokeball-png-0.png";
+              }}
             />
             <p>{selected.description || "Default Description"}</p>
             {selected.dex_id === 0 ? (

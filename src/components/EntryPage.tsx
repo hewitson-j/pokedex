@@ -81,7 +81,15 @@ export default function EntryPage() {
               <h2>
                 #{entry.dex_id}: {entry.name}
               </h2>
-              <img src={entry.image_url} alt={entry.name} />
+              <img
+                src={entry.image_url}
+                alt={entry.name}
+                onError={(e) => {
+                  const image = e.target as HTMLImageElement;
+                  image.src =
+                    "https://www.freeiconspng.com/thumbs/pokeball-png/file-pokeball-png-0.png";
+                }}
+              />
 
               <div className="types-body">
                 <div
