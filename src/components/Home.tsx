@@ -76,9 +76,10 @@ export default function Home() {
               }
               alt={selected.name || "Default Image"}
               onError={(e) => {
-                const imgElement = e.target as HTMLImageElement;
-                imgElement.src =
+                const image = e.target as HTMLImageElement;
+                image.src =
                   "https://www.freeiconspng.com/thumbs/pokeball-png/file-pokeball-png-0.png";
+                image.alt = selected.name + " - Default Image";
               }}
             />
             <p>{selected.description || "Default Description"}</p>

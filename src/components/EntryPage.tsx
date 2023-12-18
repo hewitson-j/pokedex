@@ -88,6 +88,7 @@ export default function EntryPage() {
                   const image = e.target as HTMLImageElement;
                   image.src =
                     "https://www.freeiconspng.com/thumbs/pokeball-png/file-pokeball-png-0.png";
+                  image.alt = entry.name + " - Default Image";
                 }}
               />
 
