@@ -2,7 +2,7 @@
   "name": "pokedex",
   "private": true,
   "author": "Jacob Hewitson",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "homepage": "https://hewitson-j.github.io/pokedex/",
   "scripts": {
