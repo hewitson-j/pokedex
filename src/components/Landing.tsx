@@ -6,7 +6,7 @@ export default function Landing() {
     "Welcome to Professor Applewood's Unofficial Pokédex! I'm Dexter, and I will be helping you today. The world of Pokémon is vast and full of different species of Pokémon. Here in Atamona we're no different. Press the button below to get started!";
 
   return (
-    <div className="landing">
+    <div className="landing" role="contentinfo">
       <div className="landing-body">
         <div className="header logo">
           <img src="Logo.png" className="pokeball-image" />

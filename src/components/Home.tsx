@@ -50,16 +50,16 @@ export default function Home() {
   };
 
   return (
-    <div className="home">
+    <main className="home">
       <Header />
-      <div className="home-buttons">
+      <nav className="home-buttons">
         <Link title="Learn About Atamona" to={"/atamona"}>
           <button className="buttons">Learn About Atamona</button>
         </Link>
         <Link title="Search" to={"/search"}>
           <button className="buttons">Search Pokedex</button>
         </Link>
-      </div>
+      </nav>
       <div className="home-content">
         {isLoading ? (
           <p>Loading...</p>
@@ -96,6 +96,6 @@ export default function Home() {
         )}
         <HomeList handleSelect={handleSelect} />
       </div>
-    </div>
+    </main>
   );
 }
