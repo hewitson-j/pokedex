@@ -77,7 +77,7 @@ export default function EntryPage() {
       {!isLoading ? (
         entry ? (
           <>
-            <div className="entry-page">
+            <div className="entry-page" role="contentinfo" aria-label="Pokedex Entry">
               <h2>
                 #{entry.dex_id}: {entry.name}
               </h2>
