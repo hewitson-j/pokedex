@@ -27,6 +27,10 @@
   overflow-y: scroll;
 }
 
+.home-content p {
+  text-align: left;
+}
+
 .home-media {
   display: flex;
   width: 300px;
