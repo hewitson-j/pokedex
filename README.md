@@ -15,3 +15,5 @@ Here the users are brought to an introductory page explaining the purpose of the
 
 ## Home
 The main page, home gives the users a few navigation buttons to go to different pages on the website. In the main section there is a list of all the registered Pokémon in the Pokédex. By default none is selected but the user can click on one from the list and in a separate container the image, name, number, and summary of the Pokémon are displayed with a button to bring the user to the respective entry page.
+
+## Search
